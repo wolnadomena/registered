@@ -9,7 +9,7 @@ require("post.php");
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Wolna Domena .pl - Check Your domains list</title>
+    <title>Whois.WolnaDomena.pl - Check Your domains list</title>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -20,7 +20,7 @@ require("post.php");
 <body>
 <div class="container box">
 
-    <h2 class="center">Wolna Domena .pl</h2>
+    <h2 class="center">Whois.WolnaDomena.pl</h2>
     <p class="center">More Than WHOIS...</p>
     <hr>
     <form method="post">
@@ -30,9 +30,7 @@ require("post.php");
             <textarea name="domains" cols="55" rows="20"><?php echo $_POST["domains"] ?></textarea>
         </div>
         <br/>
-        <input type="submit" name="dns" value="DNS" class="btn btn-info btn-lg"/>
         <input type="submit" name="whois" value="WHOIS" class="btn btn-info btn-lg"/>
-        <input type="submit" name="registered" value="REGISTERED" class="btn btn-info btn-lg"/>
     </form>
     <br/>
     <?php
@@ -44,21 +42,14 @@ require("post.php");
 <br/>
 <hr>
 <div class="center">
-    <div>
-        API webscreen:
-        <a href="http://webscreen.pl:3000/remove/png" target='_blank'> remove png </a>
-        |
-        <a href="http://webscreen.pl:3000/remove/txt" target='_blank'> remove txt </a>
-
-    </div>
 
     <div>
         DEV:
-        <a href="https://github.com/webtest-pl/www" target='_blank'>source code</a>
+        <a href="https://github.com/wolnadomena/www" target='_blank'>source code</a>
         |
-        <a href="https://webtest.pl/" target='_blank'> production </a>
+        <a href="https://whois.wolnadomena.pl/index.php?domains=softreck.com" target='_blank'> production </a>
         |
-        <a href="http://localhost:8080/" target='_blank'> localhost </a>
+        <a href="http://localhost:8080/index.php?domains=softreck.com" target='_blank'> localhost </a>
 
     </div>
 
