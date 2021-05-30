@@ -14,7 +14,7 @@ if (empty($_POST["domains"])) {
 
 try {
 
-    if (isset($_POST["whois"])) {
+    if (isset($_POST["registered"])) {
 
         apifunc([
             'https://php.letjson.com/let_json.php',
@@ -57,7 +57,7 @@ try {
  <div>
     <a href='$url' target='_blank'> $domain</a> 
     -
-    <a class='whois' href='https://www.wolnadomena.pl/whois.php?domain=$domain' target='_blank'> - </a>
+    <a class='whois' href='https://registered.wolnadomena.pl/registered.php?domain=$domain' target='_blank'> - </a>
 </div>
             ";
             });

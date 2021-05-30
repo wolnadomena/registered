@@ -20,7 +20,7 @@ require("post.php");
 <body>
 <div class="container box">
 
-    <h2 class="center">Whois.WolnaDomena.pl</h2>
+    <h2 class="center">Registered.WolnaDomena.pl</h2>
     <p class="center">More Than WHOIS...</p>
     <hr>
     <form method="post">
@@ -30,7 +30,7 @@ require("post.php");
             <textarea name="domains" cols="55" rows="20"><?php echo $_POST["domains"] ?></textarea>
         </div>
         <br/>
-        <input type="submit" name="whois" value="WHOIS" class="btn btn-info btn-lg"/>
+        <input type="submit" name="registered" value="registered" class="btn btn-info btn-lg"/>
     </form>
     <br/>
     <?php
@@ -47,7 +47,7 @@ require("post.php");
         DEV:
         <a href="https://github.com/wolnadomena/www" target='_blank'>source code</a>
         |
-        <a href="https://whois.wolnadomena.pl/index.php?domains=softreck.com" target='_blank'> production </a>
+        <a href="https://registered.wolnadomena.pl/index.php?domains=softreck.com" target='_blank'> production </a>
         |
         <a href="http://localhost:8080/index.php?domains=softreck.com" target='_blank'> localhost </a>
 
@@ -65,46 +65,6 @@ require("post.php");
 
     </div>
 </div>
-
-<script>
-    $('a.dns').each(function () {
-        var atext = $(this);
-        var url = atext.attr('href');
-        var jqxhr = $.ajax(url)
-            .done(function (result) {
-                var nameservers = result.nameserver.join(", ");
-                console.log(nameservers);
-                atext.html(nameservers);
-                atext.addClass("active");
-            });
-    });
-</script>
-
-
-
-<script>
-    $('a.whois').each(function () {
-        var atext = $(this);
-        var url = atext.attr('href');
-        var jqxhr = $.ajax(url)
-            .done(function (result) {
-                var info = result.whois.domain;
-                console.log(info);
-                // var whois = Object.keys(info).join(',');
-                var whois = '';
-                if ("undefined" !== typeof result.whois.domain.name) whois += result.whois.domain.name + '<br>';
-                if ("undefined" !== typeof result.whois.domain.expires) whois += result.whois.domain.expires + '<br>';
-                if ("undefined" !== typeof result.whois.domain.created) whois += result.whois.domain.created + '<br>';
-                if ("undefined" !== typeof result.whois.domain.status) whois += Object.values(result.whois.domain.status).join('<br>');
-                if ("undefined" !== typeof result.whois.domain.sponsor)  whois += Object.values(result.whois.domain.sponsor).join('<br>');
-                console.log(whois);
-
-                atext.addClass("active");
-                atext.html(whois);
-            });
-    });
-</script>
-
 
 <script>
     $('a.registered').each(function () {
