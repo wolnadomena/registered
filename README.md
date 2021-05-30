@@ -13,19 +13,26 @@ Check if domain is registered
     curl https://apifunc.github.io/php/apifunc.php --output apifunc.php
 
 
-## apicra
 
-    ./apicra/install
-    ./apicra/upgrade
-    apicra.bat remove
+# First Steps
+## on linux
+### install
+    sh .apicra\install.sh
 
-.apicra\install.bat
-.apicra\start.bat
+### start
+    sh .apicra\start.sh
 
-    ./apicra/start.bat
-    apicra.bat stop
+## on windows
 
-    apicra.bat browser
-    apicra.bat docs
+### install
+    .apicra\install.bat
 
+### start
+    .apicra\start.bat
+
+
+
+---
+
++ [edit](https://github.com/wolnadomena/registered/edit/main/README.md)
     
